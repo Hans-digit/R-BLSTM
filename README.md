@@ -45,4 +45,37 @@ result like
    
 [['r_o', 'r_c', 'r_r', 'r_o', 'r_o', 'r_c'], ['e1_c', 'e1_e', 'e1_p', 'e1_o', 'e1_o', 'e1_o'], ['e2_o', 'e2_o', 'e2_p', 'e2_c', 'e2_c', 'e2_e'], ['det', 'nsubj', 'ROOT', 'case', 'det', 'nmod'], [-1, 0, 1, 2, 3, 4], [-5, -4, -3, -2, -1, 0]]
 
+### word embedding 
+all word embeddings include padding index at the last ( index number 23514 )
+
+- Turian et al(2010) (dimension of word embedding is 50)
+- Link : http://metaoptimize.s3.amazonaws.com/hlbl-embeddings-ACL2010/hlbl-embeddings-scaled.EMBEDDING_SIZE=50.txt.gz
+- original embedding file is in './model/hlbl-embeddings-scaled.EMBEDDING_SIZE=50.txt'
+- modified embedding layer binary is in './model/turian_50.bin'
+  
+- Jeffrey Pennington et al (2014) (dimension of word embedding is 100)
+- Link : http://nlp.stanford.edu/data/glove.6B.zip
+- original embedding file is in './model/glove.6B.100d.txt'
+- modified embedding layer binary is in './model/pennington_100.bin'
+
+### Dependecy parser 
+Link 
+- 1. https://downloads.cs.stanford.edu/nlp/software/dependencies_manual.pdf ( list of all dep ) 
+- 2. https://universaldependencies.org/u/dep/
+    
+### Need data 
+- wordnet hypernym data (WNSYN)
+- NER ( use by ourself )
+- POS ( use by ourself )
+- PF 
+- WF ( word ) 
+- DEP ( dep ) 
+- RELATIVE-DEP ( root relative data, relative entity1 feature, relatvie entity2 feature ) 
+
+NOT USED DATA : root relative data, relative entity feature, 
+
+### paper should be read 
+MVRNN - socher et al (2012) ( link : https://aclanthology.org/D12-1110.pdf ) 
+- Relation Classification via Convolutional Deep Neural Network. In Proceedings of the 25th International Conference on Computational Linguistics, Zeng et al (2014)
+- Link : https://aclanthology.org/C14-1220.pdf
 

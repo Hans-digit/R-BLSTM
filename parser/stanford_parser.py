@@ -7,6 +7,7 @@ class StanfordDependencyParser():
         parses = dep_parser.parse(sentence.split())
         dic = [parse for parse in parses][0]
         nodes = dic.nodes
+        print(nodes)
         feature_list = self._relationship_feature(nodes, e1, e2)
         return feature_list
 
@@ -86,4 +87,6 @@ class StanfordDependencyParser():
 if __name__=="__main__":
     sdp = StanfordDependencyParser()
     parsed_list = sdp.get_relationship_feature('The cat sat on the mat', 'cat','mat')
+    print(parsed_list)
+    parsed_list = sdp.get_relationship_feature('''Bell, based in Los Angeles, makes and distributes electronic, computer and building products.''', 'computer','building')
     print(parsed_list)

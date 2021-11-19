@@ -1,0 +1,33 @@
+1. word tokenize
+
+2. get max word length
+
+3. store embedding model (save two embedding model to model folder)
+( use require_grad False to not update the embedding )
+- complete
+
+4. make forward ( model )
+
+5. test
+
+6. dependency parser relation 개수 찾아야 embedding input dimension 정할 수 있음
+
+dep tagger list = 37개
+Link
+- 1. https://downloads.cs.stanford.edu/nlp/software/dependencies_manual.pdf ( list of all dep )
+- 2. https://universaldependencies.org/u/dep/
+
+POS tagger list = 35개
+Link
+- 1. https://dbrang.tistory.com/1139
+- 2. https://www.learntek.org/blog/categorizing-pos-tagging-nltk-python/
+
+max sentence length
+- 85
+- -85 ~ 85
+
+
+
+
+
+
