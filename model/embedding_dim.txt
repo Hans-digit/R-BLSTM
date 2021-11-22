@@ -1,0 +1,4 @@
+total word count = 23514
+
+pennington : 23514 * 100 ( dim = 100 )
+turian : 23514 * 50 ( dim = 50 )
