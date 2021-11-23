@@ -84,9 +84,9 @@ MVRNN - socher et al (2012) ( link : https://aclanthology.org/D12-1110.pdf )
 ### Need to do 
 1. check how many word hypernyms are in our word list ( ./word/word_list.csv )
    우리가 가진 단어들에서 얼마나 많은 상위어가 있는지 확인해보세요 
-2. check how many pos taggers are in our sentneces 
+2. check how many pos tags are in our sentneces 
    우리가 가진 문장들에서 얼마나 많은 pos tagger가 나오는지 확인 해 보세요 
-3. check how many dep tagger list in our sentences 
+3. check how many dep tag list in our sentences 
    우리가 가진 문장들에서 얼마나 많은 dep tagger가 나오는지 확인 해 보세요 
 4. find a nice ner tagger, if you can, make the tagger method 
 좋은 ner 태거를 찾아보세요, 만약 당신이 할 수 있다면, 그것을 함수로 만들어서 우리가 잘 쓸수 있게 해주세요
