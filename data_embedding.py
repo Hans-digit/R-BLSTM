@@ -5,18 +5,24 @@ word_set = set()
 with open('./data/train/dataset_csv.csv', 'r') as csv_file :
     reader = csv.reader(csv_file, delimiter = '|')
     for _ in reader:
-        sentence = _[0].replace('<e1>','').replace('</e1>','').replace('<e2>','').replace('</e2>','').lower()
+        sentence = _[0].replace('<e1>',' ').replace('</e1>',' ').replace('<e2>',' ').replace('</e2>',' ').lower()
         word_set_temp = set(nltk.word_tokenize(sentence))
         word_set = word_set.union(word_set_temp)
 
 with open('./data/test/dataset_csv.csv', 'r') as csv_file :
     reader = csv.reader(csv_file, delimiter = '|')
     for _ in reader:
-        sentence = _[0].replace('<e1>','').replace('</e1>','').replace('<e2>','').replace('</e2>','').lower()
+        sentence = _[0].replace('<e1>',' ').replace('</e1>',' ').replace('<e2>',' ').replace('</e2>',' ').lower()
         word_set_temp = set(nltk.word_tokenize(sentence))
         word_set = word_set.union(word_set_temp)
 #%%
-print(word_set)
+word_set = list(word_set)
+#%%
+with open('./word/word_list.csv', 'w') as csv_file:
+    csv_writer = csv.writer(csv_file, delimiter = ',', lineterminator = '\n')
+    for word in word_set:
+        print(word)
+        csv_writer.writerow([word])
 #%%
 print(len(word_set))
 #%%

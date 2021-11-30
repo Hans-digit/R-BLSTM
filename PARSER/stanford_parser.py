@@ -4,10 +4,9 @@ dep_parser = CoreNLPDependencyParser(url = 'http://localhost:9000')
 
 class StanfordDependencyParser():
     def get_relationship_feature(self, sentence, e1, e2):
-        parses = dep_parser.parse(sentence.split())
+        parses = dep_parser.parse(sentence)
         dic = [parse for parse in parses][0]
         nodes = dic.nodes
-        print(nodes)
         feature_list = self._relationship_feature(nodes, e1, e2)
         return feature_list
 
@@ -46,6 +45,7 @@ class StanfordDependencyParser():
     def _relative_feature(self, nodes, e1, feature_name):
         for node_index in range(len(nodes)):
             node = nodes[node_index]
+            # print(node['word'], e1)
             if node['word'] == e1:
                 feature_node = node
                 break
